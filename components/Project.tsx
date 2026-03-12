@@ -1,30 +1,28 @@
-
-
 const projects = [
-  {
-    title: "Learning Management System",
-    description:
-      "A fullstack LMS platform for managing online classes, materials, and student progress.",
-    tech: ["Next.js", "NestJS", "PostgreSQL"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "Mathematics Learning Game",
-    description:
-      "Interactive Wordwall-style math learning game with card flip mechanics.",
-    tech: ["Next.js", "TypeScript", "Tailwind"],
-    github: "#",
-    demo: "#",
-  },
-  {
-    title: "School Website",
-    description:
-      "Modern school website with admin dashboard and article management system.",
-    tech: ["Next.js", "Prisma", "PostgreSQL"],
-    github: "#",
-    demo: "#",
-  },
+    {
+        title: "Flip Card Game",
+        description:
+        "A fullstack LMS platform for managing online classes, materials, and student progress.",
+        tech: ["Next.js", "NestJS", "PostgreSQL"],
+        github: "https://github.com/donyputraperkasa/flip-card-fe",
+        demo: "https://flip-card-fe.vercel.app/",
+    },
+    {
+        title: "Belajar Matematika",
+        description:
+        "Interactive Wordwall-style math learning game with card flip mechanics.",
+        tech: ["Next.js", "TypeScript", "Tailwind"],
+        github: "https://github.com/donyputraperkasa/belajarmatematika",
+        demo: "https://belajarmatematika-two.vercel.app/",
+    },
+    {
+        title: "School Website",
+        description:
+        "Modern school website with admin dashboard and article management system.",
+        tech: ["Next.js", "Prisma", "PostgreSQL"],
+        github: "https://github.com/donyputraperkasa/website-wates-fe",
+        demo: "on going",
+    },
 ]
 
 export default function Projects() {
