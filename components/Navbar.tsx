@@ -37,6 +37,14 @@ export default function Navbar() {
                     </li>
 
                     <li className="hover:text-white transition cursor-pointer">
+                        <a href="#technical-skill">Technical Skills</a>
+                    </li>
+
+                    <li className="hover:text-white transition cursor-pointer">
+                        <a href="#soft-skill">Soft Skills</a>
+                    </li>
+
+                    <li className="hover:text-white transition cursor-pointer">
                         <a href="#contact">Contact</a>
                     </li>
                 </ul>
@@ -68,6 +76,12 @@ export default function Navbar() {
                     </li>
                     <li>
                         <a href="#education" onClick={handleClose}>Education</a>
+                    </li>
+                    <li>
+                        <a href="#technical-skill" onClick={handleClose}>Technical Skills</a>
+                    </li>
+                    <li>
+                        <a href="#soft-skill" onClick={handleClose}>Soft Skills</a>
                     </li>
                     <li>
                         <a href="#contact" onClick={handleClose}>Contact</a>

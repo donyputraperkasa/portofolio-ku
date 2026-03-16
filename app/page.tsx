@@ -5,6 +5,8 @@ import About from "@/components/About"
 import Projects from "@/components/Project"
 import Experience from "@/components/Experience"
 import Education from "@/components/Education"
+import TechnicalSkill from "@/components/TechnicalSkill"
+import SoftSkill from "@/components/SoftSkill"
 import Certifications from "@/components/Certifications"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
@@ -24,6 +26,8 @@ export default function Home (){
             <Projects />
             <Experience />
             <Education />
+            <TechnicalSkill />
+            <SoftSkill />
             <Certifications />
             <Contact />
             <Footer />
