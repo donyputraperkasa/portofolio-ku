@@ -58,7 +58,7 @@ const projects = [
         "https://cdn.simpleicons.org/tailwindcss"
         ],
         github: "https://github.com/donyputraperkasa/website-wates-fe",
-        demo: "on going",
+        demo: "https://website-wates-fe.vercel.app/",
     },
 ]
 
