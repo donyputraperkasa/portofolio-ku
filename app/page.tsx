@@ -10,6 +10,7 @@ import SoftSkill from "@/components/SoftSkill"
 import Certifications from "@/components/Certifications"
 import Contact from "@/components/Contact"
 import Footer from "@/components/Footer"
+import { Analytics } from "@vercel/analytics/next"
 
 export default function Home (){
     return(
@@ -20,18 +21,20 @@ export default function Home (){
             bg-[size:40px_40px]"
         >
             <div className="max-w-6xl mx-auto px-6">
-            <Navbar />
-            <Hero />
-            <About />
-            <Projects />
-            <Experience />
-            <Education />
-            <TechnicalSkill />
-            <SoftSkill />
-            <Certifications />
-            <Contact />
-            <Footer />
+                <Navbar />
+                <Hero />
+                <About />
+                <Projects />
+                <Experience />
+                <Education />
+                <TechnicalSkill />
+                <SoftSkill />
+                <Certifications />
+                <Contact />
+                <Footer />
             </div>
+        
+            <Analytics />
         </main>
     )
 }
