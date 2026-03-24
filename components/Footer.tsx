@@ -37,7 +37,7 @@ export default function Footer() {
             </div>
 
             <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Adera Perkasa. All rights reserved.
+            © {new Date().getFullYear()} Dony Putra Perkasa. All rights reserved.
             </p>
 
         </div>
