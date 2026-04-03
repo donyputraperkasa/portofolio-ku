@@ -60,6 +60,26 @@ const projects = [
         github: "https://github.com/donyputraperkasa/website-wates-fe",
         demo: "https://website-wates-fe.vercel.app/",
     },
+    {
+        title: "Hemath Website learning mathematics leasons",
+        description:
+            "An interactive math tutoring platform that helps students learn in a more relaxed, flexible, and easy-to-understand way.",
+        problem:
+            "Many students struggle to understand mathematics due to monotonous and less interactive learning methods.",
+        role:
+            "Developed the frontend, designed a student-friendly UI/UX, and integrated learning and registration features.",
+        solution:
+            "Built a math tutoring website with a flexible learning system, structured materials, and easy access for students.",
+        result:
+            "Improved student engagement by providing a more interactive and accessible learning experience anytime.",
+        tech: [
+        "https://cdn.simpleicons.org/nextdotjs",
+        "https://cdn.simpleicons.org/typescript",
+        "https://cdn.simpleicons.org/tailwindcss"
+        ],
+        github: "https://github.com/donyputraperkasa/hemath",
+        demo: "https://hemath-jet.vercel.app",
+    }
 ]
 
 export default function Projects() {
