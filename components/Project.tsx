@@ -15,7 +15,10 @@ const projects = [
         tech: [
         "https://cdn.simpleicons.org/nextdotjs",
         "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss"
+        "https://cdn.simpleicons.org/tailwindcss",
+        "https://cdn.simpleicons.org/supabase",
+        "https://cdn.simpleicons.org/railway",
+        "https://cdn.simpleicons.org/nestjs"
         ],
         github: "https://github.com/donyputraperkasa/flip-card-fe",
         demo: "https://flip-card-fe.vercel.app/",
@@ -35,7 +38,10 @@ const projects = [
         tech: [
         "https://cdn.simpleicons.org/nextdotjs",
         "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss"
+        "https://cdn.simpleicons.org/tailwindcss",
+        "https://cdn.simpleicons.org/supabase",
+        "https://cdn.simpleicons.org/railway",
+        "https://cdn.simpleicons.org/nestjs"
         ],
         github: "https://github.com/donyputraperkasa/belajarmatematika",
         demo: "https://belajarmatematika-two.vercel.app/",
@@ -55,7 +61,10 @@ const projects = [
         tech: [
         "https://cdn.simpleicons.org/nextdotjs",
         "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss"
+        "https://cdn.simpleicons.org/tailwindcss",
+        "https://cdn.simpleicons.org/supabase",
+        "https://cdn.simpleicons.org/railway",
+        "https://cdn.simpleicons.org/nestjs"
         ],
         github: "https://github.com/donyputraperkasa/website-wates-fe",
         demo: "https://website-wates-fe.vercel.app/",
@@ -75,10 +84,36 @@ const projects = [
         tech: [
         "https://cdn.simpleicons.org/nextdotjs",
         "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss"
+        "https://cdn.simpleicons.org/tailwindcss",
+        "https://cdn.simpleicons.org/supabase",
+        "https://cdn.simpleicons.org/railway",
+        "https://cdn.simpleicons.org/nestjs"
         ],
         github: "https://github.com/donyputraperkasa/hemath",
         demo: "https://hemath-jet.vercel.app",
+    },
+    {
+        title: "Client Project – The House of Mamink",
+        description:
+            "A professional business website developed for a client to showcase their services, improve online presence, and support customer engagement.",
+        problem:
+            "The client needed a modern and responsive website to represent their business and reach a wider audience.",
+        role:
+            "Worked as a frontend developer, translating client requirements into a clean, user-friendly interface.",
+        solution:
+            "Built a responsive and scalable web application with modern UI/UX, ensuring accessibility and performance across devices.",
+        result:
+            "Successfully delivered a production-ready website that enhanced the client's brand visibility and user engagement.",
+        tech: [
+        "https://cdn.simpleicons.org/nextdotjs",
+        "https://cdn.simpleicons.org/typescript",
+        "https://cdn.simpleicons.org/tailwindcss",
+        "https://cdn.simpleicons.org/supabase",
+        "https://cdn.simpleicons.org/railway",
+        "https://cdn.simpleicons.org/nestjs"
+        ],
+        github: "",
+        demo: "https://the-house-of-mamink-fe-azure.vercel.app/",
     }
 ]
 
@@ -106,7 +141,11 @@ export default function Projects() {
                     key={index}
                     className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:-translate-y-2 hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg"
                 >
-                    <h3 className="text-xl font-semibold mb-3 group-hover:text-orange-400 transition">
+                    <h3 className={`text-xl font-semibold transition ${
+                        project.title.toLowerCase().includes("client")
+                            ? "text-blue-400"
+                            : "group-hover:text-orange-400"
+                    }`}>
                         {project.title}
                     </h3>
 
@@ -133,6 +172,7 @@ export default function Projects() {
                     </div>
 
                     <div className="flex items-center gap-3 text-sm">
+                        {project.github && (
                         <a
                             href={project.github}
                             target="_blank"
@@ -141,6 +181,7 @@ export default function Projects() {
                             <Github size={16} />
                             Github
                         </a>
+                        )}
 
                         <a
                             href={project.demo}
