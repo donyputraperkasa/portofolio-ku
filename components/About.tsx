@@ -2,7 +2,7 @@ export default function About() {
     return (
         <section
         id="about"
-        className="min-h-screen flex items-center justify-center px-6 py-24 text-white"
+        className="flex items-center justify-center px-6 py-16 md:py-24 text-white scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
         >
         <div className="max-w-4xl w-full">
 

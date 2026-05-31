@@ -145,7 +145,7 @@ export default function Projects() {
     return (
         <section
         id="projects"
-        className="min-h-screen px-6 py-24 text-white flex items-center justify-center"
+        className="px-6 py-16 md:py-24 text-white flex items-center justify-center scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
         >
         <div className="max-w-6xl w-full">
 
