@@ -1,5 +1,17 @@
 const experiences = [
     {
+        role: "IT Staff",
+        company: "Fulltime - Yayasan BOPKRI Yogyakarta",
+        year: "2026 - Present",
+        description: [
+            "Maintain and update the institution’s website by monitoring content, fixing minor issues, and ensuring smooth functionality and accessibility.",
+            "Manage and create digital content for social media platforms to support school branding, communication, and student engagement.",
+            "Provide technical support for teachers and staff by troubleshooting hardware, software, and network-related issues.",
+            "Assist in managing digital learning systems, school databases, and online administrative platforms to improve operational efficiency.",
+            "Collaborate with internal teams to develop and optimize digital solutions that support educational and administrative activities.",
+        ],
+    },
+    {
         role: "Education Staff",
         company: "Fulltime - Yayasan BOPKRI Yogyakarta",
         year: "2023 - Present",

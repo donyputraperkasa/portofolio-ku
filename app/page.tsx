@@ -24,9 +24,9 @@ export default function Home (){
                 <Navbar />
                 <Hero />
                 <About />
-                <Projects />
-                <Experience />
                 <Education />
+                <Experience />
+                <Projects />
                 <TechnicalSkill />
                 <SoftSkill />
                 <Certifications />

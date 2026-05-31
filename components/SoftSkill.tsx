@@ -3,6 +3,10 @@ export default function SoftSkill() {
         "Enjoy Learning",
         "Teamwork",
         "Discipline",
+        "Problem Solving",
+        "Adaptability",
+        "Time Management",
+        "humor",
     ];
 
     return (

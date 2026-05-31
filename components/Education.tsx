@@ -5,6 +5,12 @@ const education = [
         year: "2025 - 2026",
         description: "During my time at the faculty, I studied fundamental web development technologies including HTML5, Tailwind CSS, JavaScript, and TypeScript. I also gained experience using Next.js for front-end development and Nest.js for back-end development, building a solid foundation in full-stack web application development",
     },
+        {
+        school: "Sanata Dharma University",
+        degree: "Teacher Certificate Program",
+        year: "2023 - 2024",
+        description: "Learned the foundations of becoming a professional educator, including developing teaching administration, designing structured lesson plans, creating effective learning strategies, and implementing differentiated instruction to support diverse student needs. Also gained experience in classroom management, student-centered learning approaches, and building engaging learning environments."
+    },
     {
         school: "Sanata Dharma University",
         degree: "Mathematics Education",

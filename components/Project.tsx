@@ -94,6 +94,7 @@ const projects = [
     },
     {
         title: "Client Project – The House of Mamink",
+        type: "Client Project",
         description:
             "A professional business website developed for a client to showcase their services, improve online presence, and support customer engagement.",
         problem:
@@ -114,6 +115,29 @@ const projects = [
         ],
         github: "",
         demo: "https://the-house-of-mamink-fe-azure.vercel.app/",
+    },
+    {
+        title: "WeRent",
+        type: "Team Project",
+        description:
+            "A property rental platform that helps users discover, browse, and rent houses or accommodations through a modern web interface.",
+        problem:
+            "Users often struggle to find rental properties through scattered listings and inconsistent information.",
+        role:
+            "Contributed as a frontend developer by building responsive user interfaces and integrating rental listing features.",
+        solution:
+            "Developed a clean and responsive property rental platform with property browsing, detailed listings, and user-friendly navigation.",
+        result:
+            "Delivered a functional rental marketplace experience that makes property discovery more accessible and efficient.",
+        tech: [
+        "https://cdn.simpleicons.org/react",
+        "https://cdn.simpleicons.org/typescript",
+        "https://cdn.simpleicons.org/tailwindcss",
+        "https://cdn.simpleicons.org/vite",
+        "https://cdn.simpleicons.org/firebase"
+        ],
+        github: "https://github.com/ElangRevoU/WeRentFrontend",
+        demo: "https://we-rent-frontend-seven.vercel.app/",
     }
 ]
 
@@ -141,13 +165,29 @@ export default function Projects() {
                     key={index}
                     className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:-translate-y-2 hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg"
                 >
-                    <h3 className={`text-xl font-semibold transition ${
-                        project.title.toLowerCase().includes("client")
-                            ? "text-blue-400"
-                            : "group-hover:text-orange-400"
-                    }`}>
-                        {project.title}
-                    </h3>
+                    <div className="flex items-center gap-2 mb-2 flex-wrap">
+                        <h3 className={`text-xl font-semibold transition ${
+                            project.type === "Client Project"
+                                ? "text-blue-400"
+                                : project.type === "Team Project"
+                                ? "text-purple-400"
+                                : "group-hover:text-orange-400"
+                        }`}>
+                            {project.title}
+                        </h3>
+
+                        {project.type && (
+                            <span
+                                className={`text-[10px] px-2 py-1 rounded-full border font-medium tracking-wide ${
+                                    project.type === "Client Project"
+                                        ? "bg-blue-500/10 text-blue-300 border-blue-400/30"
+                                        : "bg-purple-500/10 text-purple-300 border-purple-400/30"
+                                }`}
+                            >
+                                {project.type}
+                            </span>
+                        )}
+                    </div>
 
                     <p className="text-white/70 text-sm mb-3">
                         {project.description}

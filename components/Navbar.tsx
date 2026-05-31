@@ -69,13 +69,13 @@ export default function Navbar() {
                         <a href="#about" onClick={handleClose}>About</a>
                     </li>
                     <li>
-                        <a href="#projects" onClick={handleClose}>Projects</a>
+                        <a href="#education" onClick={handleClose}>Education</a>
                     </li>
                     <li>
                         <a href="#experience" onClick={handleClose}>Experience</a>
                     </li>
                     <li>
-                        <a href="#education" onClick={handleClose}>Education</a>
+                        <a href="#projects" onClick={handleClose}>Projects</a>
                     </li>
                     <li>
                         <a href="#technical-skill" onClick={handleClose}>Technical Skills</a>
