@@ -1,4 +1,16 @@
 import { Github, ExternalLink } from "lucide-react"
+import {
+    SiNextdotjs,
+    SiTypescript,
+    SiTailwindcss,
+    SiSupabase,
+    SiRailway,
+    SiNestjs,
+    SiReact,
+    SiVite,
+    SiFirebase,
+} from "react-icons/si";
+
 const projects = [
     {
         title: "Flip Card Game",
@@ -12,14 +24,7 @@ const projects = [
             "Developed an interactive card matching game with smooth animations and responsive layout.",
         result:
             "Created an engaging mini-game that can be used as a fun learning activity.",
-        tech: [
-        "https://cdn.simpleicons.org/nextdotjs",
-        "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss",
-        "https://cdn.simpleicons.org/supabase",
-        "https://cdn.simpleicons.org/railway",
-        "https://cdn.simpleicons.org/nestjs"
-        ],
+        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
         github: "https://github.com/donyputraperkasa/flip-card-fe",
         demo: "https://flip-card-fe.vercel.app/",
     },
@@ -35,14 +40,7 @@ const projects = [
             "Implemented card-flip mechanics where students match questions with correct answers.",
         result:
             "Provided a more interactive way for students to practice basic math concepts.",
-        tech: [
-        "https://cdn.simpleicons.org/nextdotjs",
-        "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss",
-        "https://cdn.simpleicons.org/supabase",
-        "https://cdn.simpleicons.org/railway",
-        "https://cdn.simpleicons.org/nestjs"
-        ],
+        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
         github: "https://github.com/donyputraperkasa/belajarmatematika",
         demo: "https://belajarmatematika-two.vercel.app/",
     },
@@ -58,14 +56,7 @@ const projects = [
             "Built a website with admin dashboard allowing administrators to manage articles and content.",
         result:
             "Provides a centralized platform for publishing school news and information.",
-        tech: [
-        "https://cdn.simpleicons.org/nextdotjs",
-        "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss",
-        "https://cdn.simpleicons.org/supabase",
-        "https://cdn.simpleicons.org/railway",
-        "https://cdn.simpleicons.org/nestjs"
-        ],
+        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
         github: "https://github.com/donyputraperkasa/website-wates-fe",
         demo: "https://website-wates-fe.vercel.app/",
     },
@@ -81,14 +72,7 @@ const projects = [
             "Built a math tutoring website with a flexible learning system, structured materials, and easy access for students.",
         result:
             "Improved student engagement by providing a more interactive and accessible learning experience anytime.",
-        tech: [
-        "https://cdn.simpleicons.org/nextdotjs",
-        "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss",
-        "https://cdn.simpleicons.org/supabase",
-        "https://cdn.simpleicons.org/railway",
-        "https://cdn.simpleicons.org/nestjs"
-        ],
+        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
         github: "https://github.com/donyputraperkasa/hemath",
         demo: "https://hemath-jet.vercel.app",
     },
@@ -105,14 +89,7 @@ const projects = [
             "Built a responsive and scalable web application with modern UI/UX, ensuring accessibility and performance across devices.",
         result:
             "Successfully delivered a production-ready website that enhanced the client's brand visibility and user engagement.",
-        tech: [
-        "https://cdn.simpleicons.org/nextdotjs",
-        "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss",
-        "https://cdn.simpleicons.org/supabase",
-        "https://cdn.simpleicons.org/railway",
-        "https://cdn.simpleicons.org/nestjs"
-        ],
+        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
         github: "",
         demo: "https://the-house-of-mamink-fe-azure.vercel.app/",
     },
@@ -129,17 +106,23 @@ const projects = [
             "Developed a clean and responsive property rental platform with property browsing, detailed listings, and user-friendly navigation.",
         result:
             "Delivered a functional rental marketplace experience that makes property discovery more accessible and efficient.",
-        tech: [
-        "https://cdn.simpleicons.org/react",
-        "https://cdn.simpleicons.org/typescript",
-        "https://cdn.simpleicons.org/tailwindcss",
-        "https://cdn.simpleicons.org/vite",
-        "https://cdn.simpleicons.org/firebase"
-        ],
+        tech: ["react", "typescript", "tailwind", "vite", "firebase"],
         github: "https://github.com/ElangRevoU/WeRentFrontend",
         demo: "https://we-rent-frontend-seven.vercel.app/",
     }
 ]
+
+const techIcons: Record<string, React.ReactNode> = {
+    nextjs: <SiNextdotjs />,
+    typescript: <SiTypescript className="text-blue-500" />,
+    tailwind: <SiTailwindcss className="text-cyan-400" />,
+    supabase: <SiSupabase className="text-green-500" />,
+    railway: <SiRailway />,
+    nestjs: <SiNestjs className="text-red-500" />,
+    react: <SiReact className="text-cyan-400" />,
+    vite: <SiVite className="text-yellow-400" />,
+    firebase: <SiFirebase className="text-orange-500" />,
+};
 
 export default function Projects() {
     return (
@@ -202,12 +185,12 @@ export default function Projects() {
 
                     <div className="flex items-center gap-3 mb-6">
                         {project.tech.map((tech, i) => (
-                            <img
+                            <div
                                 key={i}
-                                src={tech}
-                                className="w-6 h-6 bg-white rounded-full transition-transform duration-300 hover:scale-110"
-                                alt="tech"
-                            />
+                                className="text-2xl transition-transform duration-300 hover:scale-110"
+                            >
+                                {techIcons[tech]}
+                            </div>
                         ))}
                     </div>
 

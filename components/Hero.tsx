@@ -1,3 +1,6 @@
+import Image from "next/image";
+import { SiNextdotjs, SiNuxt, SiVuedotjs, SiNestjs } from "react-icons/si";
+
 export default function Hero() {
     return (
         <section className="min-h-screen flex items-center justify-center text-white px-6 relative overflow-hidden">
@@ -12,10 +15,12 @@ export default function Hero() {
                 <div className="absolute inset-0 bg-blue-500/30 blur-[120px] rounded-full"></div>
                 <div className="absolute -inset-2 rounded-full border border-blue-400/30 group-hover:scale-110 transition duration-500"></div>
 
-                <img
-                src="/gambar1.jpeg"
-                alt="profile"
-                className="relative w-44 h-44 rounded-full object-cover border-4 border-white/10 shadow-2xl"
+                <Image
+                    src="/gambar1.jpeg"
+                    alt="profile"
+                    width={200}
+                    height={200}
+                    className="relative w-44 h-44 rounded-full object-cover border-4 border-white/10 shadow-2xl"
                 />
 
             </div>
@@ -36,8 +41,15 @@ export default function Hero() {
             </p>
 
             <p className="text-white/60 mb-10 text-base md:text-lg leading-relaxed max-w-2xl mx-auto">
-            Passionate about building modern, responsive, and scalable web applications using Next.js, NestJS, PostgreSQL, and modern web technologies.
+            Passionate about building modern, responsive, and scalable web applications using Next.js, NuxtJS, Vue.js, NestJS, PostgreSQL, and modern web technologies.
             </p>
+
+            <div className="flex justify-center items-center gap-5 flex-wrap mb-10 text-4xl">
+                <SiNextdotjs />
+                <SiNuxt className="text-green-500" />
+                <SiVuedotjs className="text-green-400" />
+                <SiNestjs className="text-red-500" />
+            </div>
 
             <div className="flex justify-center gap-4 flex-wrap">
 
