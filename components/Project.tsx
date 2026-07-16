@@ -1,226 +1,44 @@
-import { Github, ExternalLink } from "lucide-react"
-import {
-    SiNextdotjs,
-    SiTypescript,
-    SiTailwindcss,
-    SiSupabase,
-    SiRailway,
-    SiNestjs,
-    SiReact,
-    SiVite,
-    SiFirebase,
-} from "react-icons/si";
-
-const projects = [
-    {
-        title: "Flip Card Game",
-        description:
-            "Interactive memory card game built to improve user engagement through simple gamification mechanics.",
-        problem:
-            "Traditional learning exercises can feel repetitive and reduce student engagement.",
-        role:
-            "Designed UI, implemented card flip logic, and built responsive frontend using Next.js.",
-        solution:
-            "Developed an interactive card matching game with smooth animations and responsive layout.",
-        result:
-            "Created an engaging mini-game that can be used as a fun learning activity.",
-        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
-        github: "https://github.com/donyputraperkasa/flip-card-fe",
-        demo: "https://flip-card-fe.vercel.app/",
-    },
-    {
-        title: "Belajar Matematika",
-        description:
-            "Gamified mathematics learning platform inspired by Wordwall to help students practice arithmetic.",
-        problem:
-            "Students often lose motivation when practicing repetitive math problems.",
-        role:
-            "Built the frontend application, implemented game mechanics, and designed user-friendly UI.",
-        solution:
-            "Implemented card-flip mechanics where students match questions with correct answers.",
-        result:
-            "Provided a more interactive way for students to practice basic math concepts.",
-        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
-        github: "https://github.com/donyputraperkasa/belajarmatematika",
-        demo: "https://belajarmatematika-two.vercel.app/",
-    },
-    {
-        title: "School Website",
-        description:
-            "Modern school website with content management features for articles and school information.",
-        problem:
-            "Schools often need a simple platform to manage announcements and articles.",
-        role:
-            "Developed the frontend interface and integrated backend services for content management.",
-        solution:
-            "Built a website with admin dashboard allowing administrators to manage articles and content.",
-        result:
-            "Provides a centralized platform for publishing school news and information.",
-        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
-        github: "https://github.com/donyputraperkasa/website-wates-fe",
-        demo: "https://website-wates-fe.vercel.app/",
-    },
-    {
-        title: "Hemath Website learning mathematics leasons",
-        description:
-            "An interactive math tutoring platform that helps students learn in a more relaxed, flexible, and easy-to-understand way.",
-        problem:
-            "Many students struggle to understand mathematics due to monotonous and less interactive learning methods.",
-        role:
-            "Developed the frontend, designed a student-friendly UI/UX, and integrated learning and registration features.",
-        solution:
-            "Built a math tutoring website with a flexible learning system, structured materials, and easy access for students.",
-        result:
-            "Improved student engagement by providing a more interactive and accessible learning experience anytime.",
-        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
-        github: "https://github.com/donyputraperkasa/hemath",
-        demo: "https://hemath-jet.vercel.app",
-    },
-    {
-        title: "Client Project – The House of Mamink",
-        type: "Client Project",
-        description:
-            "A professional business website developed for a client to showcase their services, improve online presence, and support customer engagement.",
-        problem:
-            "The client needed a modern and responsive website to represent their business and reach a wider audience.",
-        role:
-            "Worked as a frontend developer, translating client requirements into a clean, user-friendly interface.",
-        solution:
-            "Built a responsive and scalable web application with modern UI/UX, ensuring accessibility and performance across devices.",
-        result:
-            "Successfully delivered a production-ready website that enhanced the client's brand visibility and user engagement.",
-        tech: ["nextjs", "typescript", "tailwind", "supabase", "railway", "nestjs"],
-        github: "",
-        demo: "https://the-house-of-mamink-fe-azure.vercel.app/",
-    },
-    {
-        title: "WeRent",
-        type: "Team Project",
-        description:
-            "A property rental platform that helps users discover, browse, and rent houses or accommodations through a modern web interface.",
-        problem:
-            "Users often struggle to find rental properties through scattered listings and inconsistent information.",
-        role:
-            "Contributed as a frontend developer by building responsive user interfaces and integrating rental listing features.",
-        solution:
-            "Developed a clean and responsive property rental platform with property browsing, detailed listings, and user-friendly navigation.",
-        result:
-            "Delivered a functional rental marketplace experience that makes property discovery more accessible and efficient.",
-        tech: ["react", "typescript", "tailwind", "vite", "firebase"],
-        github: "https://github.com/ElangRevoU/WeRentFrontend",
-        demo: "https://we-rent-frontend-seven.vercel.app/",
-    }
-]
-
-const techIcons: Record<string, React.ReactNode> = {
-    nextjs: <SiNextdotjs />,
-    typescript: <SiTypescript className="text-blue-500" />,
-    tailwind: <SiTailwindcss className="text-cyan-400" />,
-    supabase: <SiSupabase className="text-green-500" />,
-    railway: <SiRailway />,
-    nestjs: <SiNestjs className="text-red-500" />,
-    react: <SiReact className="text-cyan-400" />,
-    vite: <SiVite className="text-yellow-400" />,
-    firebase: <SiFirebase className="text-orange-500" />,
-};
+import ProjectCard from "./projects/ProjectCard"
+import { projects } from "./projects/project-data"
 
 export default function Projects() {
     return (
         <section
-        id="projects"
-        className="px-6 py-16 md:py-24 text-white flex items-center justify-center scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
+            className="scroll-mt-24 px-6 py-20 text-white md:py-28"
+            id="projects"
         >
-        <div className="max-w-6xl w-full">
-
-            <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Projects
-            </h2>
-            <p className="text-white/60">
-                Some of the projects I have worked on
-            </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-
-            {projects.map((project, index) => (
-                <div
-                    key={index}
-                    className="group bg-white/5 backdrop-blur-xl border border-white/10 rounded-2xl p-6 hover:-translate-y-2 hover:border-white/30 hover:bg-white/10 transition-all duration-300 shadow-lg"
-                >
-                    <div className="flex items-center gap-2 mb-2 flex-wrap">
-                        <h3 className={`text-xl font-semibold transition ${
-                            project.type === "Client Project"
-                                ? "text-blue-400"
-                                : project.type === "Team Project"
-                                ? "text-purple-400"
-                                : "group-hover:text-orange-400"
-                        }`}>
-                            {project.title}
-                        </h3>
-
-                        {project.type && (
-                            <span
-                                className={`text-[10px] px-2 py-1 rounded-full border font-medium tracking-wide ${
-                                    project.type === "Client Project"
-                                        ? "bg-blue-500/10 text-blue-300 border-blue-400/30"
-                                        : "bg-purple-500/10 text-purple-300 border-purple-400/30"
-                                }`}
-                            >
-                                {project.type}
-                            </span>
-                        )}
-                    </div>
-
-                    <p className="text-white/70 text-sm mb-3">
-                        {project.description}
+            <div className="mx-auto w-full max-w-6xl">
+                <header className="mx-auto mb-14 max-w-2xl text-center">
+                    <span
+                        className="mb-5 inline-flex rounded-full border
+                            border-orange-400/20 bg-orange-400/10 px-4 py-2
+                            text-xs font-semibold uppercase tracking-[0.2em]
+                            text-orange-300"
+                    >
+                        Selected work
+                    </span>
+                    <h2 className="text-3xl font-bold tracking-tight md:text-5xl">
+                        Projects built to solve
+                        <span className="block text-orange-300">
+                            real problems
+                        </span>
+                    </h2>
+                    <p className="mt-5 text-sm leading-7 text-white/55 md:text-base">
+                        A collection of full-stack products, learning platforms,
+                        and collaborative projects I have helped bring to life.
                     </p>
+                </header>
 
-                    <ul className="text-white/60 text-xs space-y-1 mb-6 list-disc list-inside">
-                        <li><span className="font-semibold text-white">Problem:</span> {project.problem}</li>
-                        <li><span className="font-semibold text-white">Role:</span> {project.role}</li>
-                        <li><span className="font-semibold text-white">Solution:</span> {project.solution}</li>
-                        <li><span className="font-semibold text-white">Result:</span> {project.result}</li>
-                    </ul>
-
-                    <div className="flex items-center gap-3 mb-6">
-                        {project.tech.map((tech, i) => (
-                            <div
-                                key={i}
-                                className="text-2xl transition-transform duration-300 hover:scale-110"
-                            >
-                                {techIcons[tech]}
-                            </div>
-                        ))}
-                    </div>
-
-                    <div className="flex items-center gap-3 text-sm">
-                        {project.github && (
-                        <a
-                            href={project.github}
-                            target="_blank"
-                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-white/10 hover:bg-white/20 transition"
-                        >
-                            <Github size={16} />
-                            Github
-                        </a>
-                        )}
-
-                        <a
-                            href={project.demo}
-                            target="_blank"
-                            className="flex items-center gap-2 px-3 py-1.5 rounded-lg bg-orange-500/90 hover:bg-orange-500 transition text-white"
-                        >
-                            <ExternalLink size={16} />
-                            Live Demo
-                        </a>
-                    </div>
+                <div className="grid gap-7 md:grid-cols-2 lg:grid-cols-3">
+                    {projects.map((project, index) => (
+                        <ProjectCard
+                            index={index}
+                            key={project.title}
+                            project={project}
+                        />
+                    ))}
                 </div>
-            ))}
-
             </div>
-
-        </div>
         </section>
     )
 }

@@ -1,33 +1,106 @@
+import { Brain, GraduationCap, HeartHandshake, Lightbulb } from "lucide-react"
+
+import SectionHeader from "./ui/SectionHeader"
+
+const values = [
+    {
+        description: "Breaking complex problems into clear, practical steps.",
+        icon: Brain,
+        title: "Structured thinking",
+    },
+    {
+        description: "Designing with real people and their context in mind.",
+        icon: HeartHandshake,
+        title: "Human-centered",
+    },
+    {
+        description: "Always exploring a better approach, tool, or pattern.",
+        icon: Lightbulb,
+        title: "Curious by nature",
+    },
+]
+
 export default function About() {
     return (
-        <section
-        id="about"
-        className="flex items-center justify-center px-6 py-16 md:py-24 text-white scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
-        >
-        <div className="max-w-4xl w-full">
+        <section className="scroll-mt-24 px-6 py-24 md:py-28" id="about">
+            <div className="mx-auto max-w-6xl">
+                <SectionHeader
+                    align="left"
+                    description="The perspective and principles behind the products I build."
+                    eyebrow="About me"
+                    title="Logic in the code. Empathy in the experience."
+                />
 
-            <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                About Me
-            </h2>
-            <p className="text-white/60">
-                A short introduction about who I am and what I do
-            </p>
+                <div className="mt-12 grid gap-6 lg:grid-cols-[1.2fr_0.8fr]">
+                    <article
+                        className="relative overflow-hidden rounded-3xl border
+                            border-white/10 bg-white/[0.045] p-8 md:p-10"
+                    >
+                        <GraduationCap
+                            className="absolute -right-8 -top-8 text-white/[0.035]"
+                            size={190}
+                        />
+                        <p
+                            className="relative text-xl font-medium leading-9
+                                text-white/85 md:text-2xl md:leading-10"
+                        >
+                            I am a developer and educator who combines the
+                            analytical discipline of mathematics with the
+                            creativity of modern product development.
+                        </p>
+                        <p className="relative mt-6 max-w-2xl leading-8 text-white/55">
+                            Teaching trained me to explain difficult ideas simply.
+                            Software engineering lets me turn that clarity into
+                            interfaces, APIs, and systems people can rely on.
+                        </p>
+                        <div className="relative mt-10 grid grid-cols-3 gap-3">
+                            {["Educator", "Developer", "Problem solver"].map(
+                                (item, index) => (
+                                    <div
+                                        className="rounded-2xl border border-white/10
+                                            bg-slate-950/30 p-4"
+                                        key={item}
+                                    >
+                                        <span className="text-xs text-orange-300">
+                                            0{index + 1}
+                                        </span>
+                                        <p className="mt-2 text-xs font-semibold text-white">
+                                            {item}
+                                        </p>
+                                    </div>
+                                ),
+                            )}
+                        </div>
+                    </article>
+
+                    <div className="grid gap-4">
+                        {values.map(({ description, icon: Icon, title }) => (
+                            <article
+                                className="group flex items-start gap-4 rounded-3xl
+                                    border border-white/10 bg-white/[0.04] p-6
+                                    transition hover:-translate-y-1
+                                    hover:border-orange-300/25 hover:bg-white/[0.07]"
+                                key={title}
+                            >
+                                <span
+                                    className="grid h-11 w-11 shrink-0 place-items-center
+                                        rounded-2xl bg-orange-300/10 text-orange-300
+                                        transition group-hover:bg-orange-300
+                                        group-hover:text-slate-950"
+                                >
+                                    <Icon size={20} />
+                                </span>
+                                <div>
+                                    <h3 className="font-bold text-white">{title}</h3>
+                                    <p className="mt-2 text-sm leading-6 text-white/50">
+                                        {description}
+                                    </p>
+                                </div>
+                            </article>
+                        ))}
+                    </div>
+                </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-8 md:p-10">
-
-            <p className="text-white/80 leading-relaxed mb-6">
-                I am a developer with a strong analytical background in mathematics education, bringing structured thinking and problem-solving into modern web development. I enjoy building practical digital solutions and continuously improving my technical skills.
-            </p>
-
-            <p className="text-white/70 leading-relaxed">
-                My core stack includes <span className="font-semibold text-orange-300">JavaScript</span> and <span className="font-semibold text-orange-300">TypeScript</span> with modern frameworks such as <span className="font-semibold text-orange-300">Next.js</span> and <span className="font-semibold text-orange-300">NestJS</span> for building fullstack applications. I also work with HTML5, Tailwind CSS, and responsive UI development. I enjoy transforming ideas into clean, functional, and scalable web experiences while continuously learning new technologies.
-            </p>
-
-            </div>
-
-        </div>
         </section>
     )
 }

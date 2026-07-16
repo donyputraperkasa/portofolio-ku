@@ -1,55 +1,74 @@
+import { Award, BadgeCheck } from "lucide-react"
+
+import SectionHeader from "./ui/SectionHeader"
+
 const certifications = [
     {
-        title: "Fullstack Software Engineering",
         issuer: "RevoU",
+        title: "Full-Stack Software Engineering",
         year: "2026",
     },
     {
-        title: "Teacher Certificate Program",
         issuer: "Kemendikbud",
+        title: "Teacher Certificate Program",
         year: "2024",
     },
 ]
 
 export default function Certifications() {
     return (
-        <section
-        id="certifications"
-        className="px-6 py-16 md:py-24 text-white flex items-center justify-center scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
-        >
-        <div className="max-w-4xl w-full">
+        <section className="scroll-mt-24 px-6 py-24 text-white md:py-28">
+            <div className="mx-auto max-w-6xl">
+                <SectionHeader
+                    description="Formal milestones that support my work in software and education."
+                    eyebrow="Credentials"
+                    title="Certified to keep learning and delivering."
+                />
 
-            <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Certifications
-            </h2>
-            <p className="text-white/60">
-                Courses and certifications I have completed
-            </p>
-            </div>
-
-            <div className="grid md:grid-cols-2 gap-6">
-            {certifications.map((cert, index) => (
-                <div
-                key={index}
-                className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6"
-                >
-                <h3 className="text-lg font-semibold">
-                    {cert.title}
-                </h3>
-
-                <p className="text-white/70 text-sm">
-                    {cert.issuer}
-                </p>
-
-                <p className="text-white/50 text-sm">
-                    {cert.year}
-                </p>
+                <div className="mt-14 grid gap-6 md:grid-cols-2">
+                    {certifications.map((certificate, index) => (
+                        <article
+                            className="group relative overflow-hidden rounded-3xl
+                                border border-white/10 bg-white/[0.045] p-7
+                                transition hover:-translate-y-1
+                                hover:border-orange-300/25 md:p-8"
+                            key={certificate.title}
+                        >
+                            <Award
+                                className="absolute -bottom-10 -right-8
+                                    text-white/[0.035]"
+                                size={170}
+                            />
+                            <div className="relative flex items-start gap-5">
+                                <span
+                                    className={`grid h-14 w-14 shrink-0 place-items-center
+                                        rounded-2xl ${
+                                        index === 0
+                                            ? "bg-orange-300 text-slate-950"
+                                            : "bg-blue-400 text-slate-950"
+                                    }`}
+                                >
+                                    <BadgeCheck size={25} />
+                                </span>
+                                <div>
+                                    <p
+                                        className="font-mono text-[11px] uppercase
+                                            tracking-wider text-white/40"
+                                    >
+                                        Issued {certificate.year}
+                                    </p>
+                                    <h3 className="mt-3 text-xl font-bold leading-7">
+                                        {certificate.title}
+                                    </h3>
+                                    <p className="mt-2 text-sm text-orange-300">
+                                        {certificate.issuer}
+                                    </p>
+                                </div>
+                            </div>
+                        </article>
+                    ))}
                 </div>
-            ))}
             </div>
-
-        </div>
         </section>
     )
 }

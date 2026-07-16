@@ -1,46 +1,46 @@
+import { ArrowUp } from "lucide-react"
+
 export default function Footer() {
     return (
-        <footer className="px-6 py-12 text-white border-t border-white/10">
-        <div className="max-w-5xl mx-auto text-center">
-
-            <h3 className="text-xl font-semibold mb-4">
-                Dony Putra Perkasa
-            </h3>
-
-            <p className="text-white/60 mb-6">
-                Frontend Developer | Backend Developer | Fullstack Developer
-            </p>
-
-            <div className="flex justify-center gap-6 text-sm text-white/70 mb-6">
-            <a
-                href="https://github.com"
-                target="_blank"
-                className="hover:text-white transition"
+        <footer className="px-6 pb-10 pt-4 text-white">
+            <div
+                className="mx-auto grid max-w-6xl gap-8 border-t
+                    border-white/10 pt-8 md:grid-cols-3 md:items-center"
             >
-                GitHub
-            </a>
-
-            <a
-                href="https://linkedin.com"
-                target="_blank"
-                className="hover:text-white transition"
-            >
-                LinkedIn
-            </a>
-
-            <a
-                href="mailto:your@email.com"
-                className="hover:text-white transition"
-            >
-                Email
-            </a>
+                <div>
+                    <p className="font-bold">Dony Putra Perkasa</p>
+                    <p className="mt-1 text-xs text-white/35">
+                        Full-stack developer & educator
+                    </p>
+                </div>
+                <p className="text-xs text-white/35 md:text-center">
+                    Designed and built with care in Yogyakarta.
+                </p>
+                <div className="flex items-center gap-5 md:justify-end">
+                    <a
+                        className="text-xs text-white/50 transition
+                            hover:text-orange-300"
+                        href="mailto:donyputraperkasa@gmail.com"
+                    >
+                        Email
+                    </a>
+                    <a
+                        className="flex items-center gap-2 text-xs
+                            text-white/50 transition hover:text-orange-300"
+                        href="#top"
+                    >
+                        Back to top
+                        <ArrowUp size={14} />
+                    </a>
+                </div>
+                <p
+                    className="border-t border-white/5 pt-5 text-[10px]
+                        text-white/20 md:col-span-3"
+                >
+                    © {new Date().getFullYear()} Dony Putra Perkasa.
+                    All rights reserved.
+                </p>
             </div>
-
-            <p className="text-white/40 text-sm">
-            © {new Date().getFullYear()} Dony Putra Perkasa. All rights reserved.
-            </p>
-
-        </div>
         </footer>
     )
 }

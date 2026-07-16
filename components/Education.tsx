@@ -1,54 +1,115 @@
+import { BookOpen, Code2, Sigma } from "lucide-react"
+
+import SectionHeader from "./ui/SectionHeader"
+
 const education = [
     {
+        accent: "text-orange-300 bg-orange-300/10",
+        degree: "Full-Stack Software Engineering",
+        description:
+            "Project-based training in frontend, backend, databases, testing, " +
+            "and collaborative product delivery.",
+        icon: Code2,
         school: "RevoU",
-        degree: "Fullstack Software Engineering",
-        year: "2025 - 2026",
-        description: "During my time at the faculty, I studied fundamental web development technologies including HTML5, Tailwind CSS, JavaScript, and TypeScript. I also gained experience using Next.js for front-end development and Nest.js for back-end development, building a solid foundation in full-stack web application development",
-    },
-        {
-        school: "Sanata Dharma University",
-        degree: "Teacher Certificate Program",
-        year: "2023 - 2024",
-        description: "Learned the foundations of becoming a professional educator, including developing teaching administration, designing structured lesson plans, creating effective learning strategies, and implementing differentiated instruction to support diverse student needs. Also gained experience in classroom management, student-centered learning approaches, and building engaging learning environments."
+        topics: ["Next.js", "NestJS", "TypeScript"],
+        year: "2025 — 2026",
     },
     {
+        accent: "text-blue-300 bg-blue-300/10",
+        degree: "Teacher Certificate Program",
+        description:
+            "Professional education in lesson design, differentiated " +
+            "instruction, assessment, and classroom management.",
+        icon: BookOpen,
         school: "Sanata Dharma University",
+        topics: ["Teaching", "Assessment", "Learning Design"],
+        year: "2023 — 2024",
+    },
+    {
+        accent: "text-emerald-300 bg-emerald-300/10",
         degree: "Mathematics Education",
-        year: "2014 - 2019",
-        description: "Studied core subjects including Algebra, Geometry, Calculus, and Statistics, while developing analytical and problem-solving skills. Gained knowledge in instructional planning, classroom management, and effective teaching strategies, including preparing structured lesson plans, designing engaging learning activities, and incorporating games and ice-breaking sessions to create an interactive and positive classroom environment."
-    }
+        description:
+            "A foundation in analytical reasoning, problem solving, " +
+            "statistics, and clear mathematical communication.",
+        icon: Sigma,
+        school: "Sanata Dharma University",
+        topics: ["Algebra", "Calculus", "Statistics"],
+        year: "2014 — 2019",
+    },
 ]
 
 export default function Education() {
     return (
         <section
-        id="education"
-        className="px-6 py-16 md:py-24 text-white flex items-center justify-center scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
+            className="scroll-mt-24 px-6 py-24 text-white md:py-28"
+            id="education"
         >
-        <div className="max-w-4xl w-full">
+            <div className="mx-auto max-w-6xl">
+                <SectionHeader
+                    description={
+                        "Learning experiences that shaped how I analyze, " +
+                        "communicate, and build."
+                    }
+                    eyebrow="Education"
+                    title="A foundation in both people and technology."
+                />
 
-            <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">Education</h2>
-            <p className="text-white/60">
-                My academic background
-            </p>
-            </div>
+                <div className="mt-14 grid gap-6 lg:grid-cols-3">
+                    {education.map((item, index) => {
+                        const Icon = item.icon
 
-            <div className="space-y-6">
-            {education.map((item, index) => (
-                <div
-                key={index}
-                className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6"
-                >
-                <h3 className="text-xl font-semibold">{item.school}</h3>
-                <p className="text-white/70">{item.degree}</p>
-                <p className="text-sm text-white/50 mb-3">{item.year}</p>
-                <p className="text-white/70 text-sm">{item.description}</p>
+                        return (
+                            <article
+                                className="group relative overflow-hidden rounded-3xl
+                                    border border-white/10 bg-white/[0.045] p-7
+                                    transition duration-500 hover:-translate-y-2
+                                    hover:border-white/20 hover:bg-white/[0.07]"
+                                key={item.degree}
+                            >
+                                <span
+                                    className="absolute right-6 top-6 font-mono
+                                        text-xs text-white/20"
+                                >
+                                    0{index + 1}
+                                </span>
+                                <span
+                                    className={`grid h-12 w-12 place-items-center
+                                        rounded-2xl ${item.accent}`}
+                                >
+                                    <Icon size={22} />
+                                </span>
+                                <p
+                                    className="mt-8 font-mono text-[11px]
+                                        uppercase tracking-wider text-orange-300"
+                                >
+                                    {item.year}
+                                </p>
+                                <h3 className="mt-3 text-xl font-bold">
+                                    {item.degree}
+                                </h3>
+                                <p className="mt-2 text-sm font-medium text-white/45">
+                                    {item.school}
+                                </p>
+                                <p className="mt-5 text-sm leading-7 text-white/55">
+                                    {item.description}
+                                </p>
+                                <div className="mt-7 flex flex-wrap gap-2">
+                                    {item.topics.map((topic) => (
+                                        <span
+                                            className="rounded-lg border border-white/10
+                                                bg-white/5 px-2.5 py-1.5 text-[10px]
+                                                text-white/55"
+                                            key={topic}
+                                        >
+                                            {topic}
+                                        </span>
+                                    ))}
+                                </div>
+                            </article>
+                        )
+                    })}
                 </div>
-            ))}
             </div>
-
-        </div>
         </section>
     )
 }
