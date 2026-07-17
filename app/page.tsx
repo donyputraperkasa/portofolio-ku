@@ -9,8 +9,10 @@ import Footer from "@/components/Footer"
 import Hero from "@/components/Hero"
 import Navbar from "@/components/Navbar"
 import Projects from "@/components/Project"
+import Services from "@/components/services/Services"
 import SoftSkill from "@/components/SoftSkill"
 import TechnicalSkill from "@/components/TechnicalSkill"
+import ScrollToTop from "@/components/ui/ScrollToTop"
 
 const gridBackground = {
     backgroundImage: [
@@ -40,15 +42,17 @@ export default function Home() {
             <div className="relative">
                 <Navbar />
                 <Hero />
+                <Services />
                 <About />
+                <Education />
+                <Certifications />
                 <Projects />
                 <Experience />
-                <Education />
                 <TechnicalSkill />
                 <SoftSkill />
-                <Certifications />
                 <Contact />
                 <Footer />
+                <ScrollToTop />
             </div>
             <Analytics />
         </main>

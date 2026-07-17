@@ -4,14 +4,14 @@ import SectionHeader from "./ui/SectionHeader"
 
 const certifications = [
     {
-        issuer: "RevoU",
-        title: "Full-Stack Software Engineering",
-        year: "2026",
-    },
-    {
         issuer: "Kemendikbud",
         title: "Teacher Certificate Program",
         year: "2024",
+    },
+    {
+        issuer: "RevoU",
+        title: "Full-Stack Software Engineering",
+        year: "2026",
     },
 ]
 
@@ -44,8 +44,8 @@ export default function Certifications() {
                                     className={`grid h-14 w-14 shrink-0 place-items-center
                                         rounded-2xl ${
                                         index === 0
-                                            ? "bg-orange-300 text-slate-950"
-                                            : "bg-blue-400 text-slate-950"
+                                            ? "bg-blue-400 text-slate-950"
+                                            : "bg-orange-300 text-slate-950"
                                     }`}
                                 >
                                     <BadgeCheck size={25} />

@@ -1,4 +1,10 @@
-import { ArrowDown, FileText, MapPin, Sparkles } from "lucide-react"
+import {
+    ArrowDown,
+    ArrowUpRight,
+    BriefcaseBusiness,
+    MapPin,
+    Sparkles,
+} from "lucide-react"
 import Image from "next/image"
 import {
     SiNestjs,
@@ -63,9 +69,9 @@ export default function Hero() {
                     className="mt-7 max-w-xl text-base leading-8
                         text-white/60 md:text-lg"
                 >
-                    Full-stack developer with a mathematics education
-                    background, building thoughtful digital experiences
-                    from interface to database.
+                    Full-stack developer and mathematics educator, helping
+                    businesses build useful digital products and students
+                    understand mathematics with confidence.
                 </p>
 
                 <div className="mt-9 flex flex-wrap gap-3">
@@ -82,12 +88,10 @@ export default function Hero() {
                         className="flex items-center gap-2 rounded-full border
                             border-white/15 bg-white/5 px-6 py-3.5 text-sm
                             font-semibold transition hover:bg-white/10"
-                        href={cvUrl}
-                        rel="noreferrer"
-                        target="_blank"
+                        href="#services"
                     >
-                        <FileText size={17} />
-                        View résumé
+                        <BriefcaseBusiness size={17} />
+                        View services
                     </a>
                 </div>
 
@@ -110,6 +114,17 @@ export default function Hero() {
                         <SiNuxt className="text-green-400" title="Nuxt.js" />
                         <SiPostgresql className="text-blue-300" title="PostgreSQL" />
                     </div>
+                    <a
+                        className="flex items-center gap-1 text-xs
+                            font-medium text-white/45 transition
+                            hover:text-orange-300"
+                        href={cvUrl}
+                        rel="noreferrer"
+                        target="_blank"
+                    >
+                        Résumé
+                        <ArrowUpRight size={13} />
+                    </a>
                 </div>
             </div>
 
@@ -139,7 +154,7 @@ export default function Hero() {
                     >
                         <p className="text-xs text-white/50">Currently building</p>
                         <p className="mt-1 font-bold text-white">
-                            Better tools for education
+                            Mathematics and Software Engineering
                         </p>
                     </div>
                 </div>
