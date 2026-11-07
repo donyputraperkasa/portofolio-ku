@@ -1,9 +1,9 @@
 import {
     ArrowDown,
-    ArrowUpRight,
     BriefcaseBusiness,
+    FileText,
+    Globe,
     MapPin,
-    Sparkles,
 } from "lucide-react"
 import Image from "next/image"
 import {
@@ -11,6 +11,7 @@ import {
     SiNextdotjs,
     SiNuxt,
     SiPostgresql,
+    SiReact,
     SiTypescript,
     SiVite,
 } from "react-icons/si"
@@ -22,151 +23,162 @@ const cvUrl =
 export default function Hero() {
     return (
         <section
-            className="relative mx-auto grid min-h-screen max-w-6xl
-                items-center gap-14 px-6 pb-20 pt-36 text-white lg:grid-cols-2"
+            className="relative mx-auto max-w-6xl px-6 pb-20 pt-32 md:pb-24 md:pt-40"
             id="top"
         >
-            <div className="relative z-10">
-                <div
-                    className="mb-7 inline-flex items-center gap-2 rounded-full
-                        border border-emerald-400/20 bg-emerald-400/10
-                        px-4 py-2 text-xs font-medium text-emerald-300"
-                >
-                    <span className="relative flex h-2 w-2">
-                        <span
-                            className="absolute h-full w-full animate-ping
-                                rounded-full bg-emerald-300 opacity-70"
-                        />
-                        <span
-                            className="relative h-2 w-2 rounded-full
-                                bg-emerald-300"
-                        />
-                    </span>
-                    Available for meaningful projects
-                </div>
+            <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
+                <div>
+                    <h1
+                        className="text-4xl font-extrabold leading-[1.12]
+                            tracking-tight text-slate-900 sm:text-5xl md:text-6xl"
+                    >
+                        Mengubah ide kompleks menjadi{" "}
+                        <span className="text-[#0284C7]">
+                            produk digital yang ramah & bermanfaat.
+                        </span>
+                    </h1>
 
-                <p
-                    className="mb-4 flex items-center gap-2 text-sm
-                        font-semibold text-orange-300"
-                >
-                    <Sparkles size={17} />
-                    Hello, I&apos;m Dony Putra Perkasa
-                </p>
-                <h1
-                    className="max-w-3xl text-5xl font-black leading-[0.98]
-                        tracking-[-0.05em] md:text-7xl"
-                >
-                    I turn complex ideas into
-                    <span
-                        className="block bg-gradient-to-r from-orange-300
-                            via-amber-200 to-blue-300 bg-clip-text
-                            text-transparent"
+                    <p
+                        className="mt-6 max-w-xl text-base leading-8
+                            text-slate-600 md:text-lg"
                     >
-                        useful products.
-                    </span>
-                </h1>
-                <p
-                    className="mt-7 max-w-xl text-base leading-8
-                        text-white/60 md:text-lg"
-                >
-                    Full-stack developer and mathematics educator, helping
-                    businesses build useful digital products and students
-                    understand mathematics with confidence.
-                </p>
-
-                <div className="mt-9 flex flex-wrap gap-3">
-                    <a
-                        className="flex items-center gap-2 rounded-full
-                            bg-orange-300 px-6 py-3.5 text-sm font-bold
-                            text-slate-950 transition hover:-translate-y-1"
-                        href="#projects"
-                    >
-                        Explore my work
-                        <ArrowDown size={17} />
-                    </a>
-                    <a
-                        className="flex items-center gap-2 rounded-full border
-                            border-white/15 bg-white/5 px-6 py-3.5 text-sm
-                            font-semibold transition hover:bg-white/10"
-                        href="#services"
-                    >
-                        <BriefcaseBusiness size={17} />
-                        View services
-                    </a>
-                </div>
-
-                <div
-                    className="mt-10 flex flex-wrap items-center gap-5
-                        border-t border-white/10 pt-6"
-                >
-                    <span
-                        className="flex items-center gap-2 text-xs
-                            text-white/45"
-                    >
-                        <MapPin size={15} className="text-orange-300" />
-                        Yogyakarta, Indonesia
-                    </span>
-                    <div className="flex items-center gap-4 text-2xl text-white/55">
-                        <SiNextdotjs title="Next.js" />
-                        <SiVite className="text-violet-400" title="Vite" />
-                        <SiTypescript className="text-blue-400" title="TypeScript" />
-                        <SiNestjs className="text-red-400" title="NestJS" />
-                        <SiNuxt className="text-green-400" title="Nuxt.js" />
-                        <SiPostgresql className="text-blue-300" title="PostgreSQL" />
-                    </div>
-                    <a
-                        className="flex items-center gap-1 text-xs
-                            font-medium text-white/45 transition
-                            hover:text-orange-300"
-                        href={cvUrl}
-                        rel="noreferrer"
-                        target="_blank"
-                    >
-                        Résumé
-                        <ArrowUpRight size={13} />
-                    </a>
-                </div>
-            </div>
-
-            <div className="relative mx-auto w-full max-w-md lg:ml-auto">
-                <div
-                    className="absolute -inset-8 rounded-full bg-blue-500/20
-                        blur-3xl"
-                />
-                <div
-                    className="relative overflow-hidden rounded-[2.5rem]
-                        border border-white/15 bg-white/5 p-3 shadow-2xl
-                        shadow-blue-950/40 rotate-2 transition duration-500
-                        hover:rotate-0"
-                >
-                    <Image
-                        alt="Dony Putra Perkasa"
-                        className="h-[520px] w-full rounded-[2rem] object-cover"
-                        height={620}
-                        priority
-                        src="/gambar1.jpeg"
-                        width={500}
-                    />
-                    <div
-                        className="absolute inset-x-7 bottom-7 rounded-2xl
-                            border border-white/15 bg-slate-950/70 p-4
-                            backdrop-blur-xl"
-                    >
-                        <p className="text-xs text-white/50">Currently building</p>
-                        <p className="mt-1 font-bold text-white">
-                            Mathematics and Software Engineering
-                        </p>
-                    </div>
-                </div>
-                <div
-                    className="absolute -left-8 top-20 rounded-2xl border
-                        border-white/15 bg-slate-950/80 px-4 py-3
-                        shadow-xl backdrop-blur-xl"
-                >
-                    <p className="text-2xl font-black text-orange-300">9+</p>
-                    <p className="text-[10px] uppercase tracking-wider text-white/45">
-                        Projects shipped
+                        Saya adalah <strong className="font-semibold text-slate-900">Owner satelyd.id</strong>,{" "}
+                        <strong className="font-semibold text-slate-900">Software Engineering</strong>, dan{" "}
+                        <strong className="font-semibold text-slate-900">Pendidik Matematika</strong> di Yogyakarta.
+                        Membantu sekolah, organisasi, dan bisnis membangun sistem web modern serta mendampingi siswa memahami matematika dengan nyaman.
                     </p>
+
+                    <div className="mt-8 flex flex-wrap items-center gap-3">
+                        <a
+                            className="inline-flex items-center justify-center gap-2
+                                rounded-xl border border-[#38BDF8]/35 bg-[#0284C7]
+                                px-6 py-[11px] text-[14px] font-semibold text-white
+                                shadow-sm transition hover:-translate-y-0.5
+                                hover:bg-[#0369A1]"
+                            href="#projects"
+                        >
+                            Lihat Portofolio Proyek
+                            <ArrowDown size={16} />
+                        </a>
+                        <a
+                            className="inline-flex items-center justify-center gap-2
+                                rounded-xl border border-slate-200 bg-white
+                                px-5 py-[11px] text-[13.5px] font-semibold
+                                text-slate-700 shadow-xs transition
+                                hover:-translate-y-0.5 hover:border-slate-300
+                                hover:bg-slate-50 hover:text-slate-900"
+                            href="#services"
+                        >
+                            <BriefcaseBusiness size={16} className="text-[#0284C7]" />
+                            Layanan Saya
+                        </a>
+                        <a
+                            className="inline-flex items-center justify-center gap-2
+                                rounded-xl border border-sky-200 bg-sky-50
+                                px-5 py-[11px] text-[13.5px] font-semibold
+                                text-[#0284C7] transition hover:-translate-y-0.5
+                                hover:bg-sky-100"
+                            href={cvUrl}
+                            rel="noreferrer"
+                            target="_blank"
+                        >
+                            <FileText size={16} className="text-[#0284C7]" />
+                            Lihat CV
+                        </a>
+                    </div>
+
+                    <div
+                        className="mt-10 flex flex-wrap items-center justify-between
+                            gap-4 rounded-2xl border border-slate-200 bg-white
+                            px-5 py-4 shadow-xs"
+                    >
+                        <div className="flex items-center gap-2 text-xs font-medium text-slate-600">
+                            <MapPin size={15} className="text-[#0284C7]" />
+                            Yogyakarta, Indonesia
+                        </div>
+
+                        <div className="flex items-center gap-3.5 text-xl text-slate-600">
+                            <SiNextdotjs className="text-slate-900" title="Next.js" />
+                            <SiReact className="text-[#0284C7]" title="React" />
+                            <SiVite className="text-amber-500" title="Vite" />
+                            <SiTypescript className="text-blue-600" title="TypeScript" />
+                            <SiNestjs className="text-rose-600" title="NestJS" />
+                            <SiNuxt className="text-emerald-600" title="Nuxt.js" />
+                            <SiPostgresql className="text-sky-700" title="PostgreSQL" />
+                        </div>
+                    </div>
+                </div>
+
+                <div className="relative mx-auto w-full max-w-md lg:ml-auto">
+                    <div
+                        className="relative overflow-hidden rounded-3xl border
+                            border-slate-200 bg-white p-3.5 shadow-md"
+                    >
+                        <div className="relative overflow-hidden rounded-2xl bg-slate-100">
+                            <Image
+                                alt="Dony Putra Perkasa"
+                                className="h-[460px] w-full object-cover object-top"
+                                height={560}
+                                priority
+                                src="/gambar1.jpeg"
+                                width={480}
+                            />
+                        </div>
+
+                        <div
+                            className="mt-3.5 rounded-2xl border border-slate-200
+                                bg-slate-50 p-4"
+                        >
+                            <div className="flex items-center justify-between gap-2">
+                                <div>
+                                    <p className="text-[11px] font-semibold uppercase tracking-wider text-[#0284C7]">
+                                        Owner
+                                    </p>
+                                    <p className="mt-0.5 text-base font-bold text-slate-900">
+                                        satelyd.id
+                                    </p>
+                                </div>
+                                <a
+                                    className="inline-flex items-center gap-1.5 rounded-lg
+                                        border border-sky-200 bg-sky-50 px-2.5 py-[5px]
+                                        text-[11.5px] font-semibold text-[#0284C7]
+                                        transition hover:bg-[#0284C7] hover:text-white"
+                                    href="https://satelyd.id"
+                                    rel="noreferrer"
+                                    target="_blank"
+                                >
+                                    <Globe size={13} />
+                                    Buka
+                                </a>
+                            </div>
+                            <p className="mt-2 text-xs leading-5 text-slate-600">
+                                Media pembelajaran interaktif (Game Kelas), bimbingan les matematika, dan pembuatan website modern.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div
+                        className="mt-4 grid grid-cols-3 gap-3"
+                    >
+                        <div className="rounded-2xl border border-slate-200 bg-white p-3.5 text-center shadow-xs">
+                            <p className="text-xl font-extrabold text-[#0284C7]">15+</p>
+                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                                Proyek Aktif
+                            </p>
+                        </div>
+                        <div className="rounded-2xl border border-slate-200 bg-white p-3.5 text-center shadow-xs">
+                            <p className="text-xl font-extrabold text-[#0284C7]">Gr.</p>
+                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                                Guru Tersertifikasi
+                            </p>
+                        </div>
+                        <div className="rounded-2xl border border-slate-200 bg-white p-3.5 text-center shadow-xs">
+                            <p className="text-xl font-extrabold text-[#0284C7]">FSSE</p>
+                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                                Alumni RevoU
+                            </p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

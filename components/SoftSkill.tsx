@@ -9,49 +9,48 @@ import {
 } from "lucide-react"
 
 const skills = [
-    { icon: Lightbulb, label: "Enjoy learning" },
-    { icon: Users, label: "Teamwork" },
-    { icon: ShieldCheck, label: "Discipline" },
-    { icon: Heart, label: "Problem solving" },
-    { icon: RefreshCw, label: "Adaptability" },
-    { icon: Clock3, label: "Time management" },
-    { icon: Laugh, label: "Good humor" },
+    { icon: Lightbulb, label: "Senang Belajar Hal Baru" },
+    { icon: Users, label: "Kolaboratif & Komunikatif" },
+    { icon: ShieldCheck, label: "Disiplin & Bertanggung Jawab" },
+    { icon: Heart, label: "Sabar & Empatik" },
+    { icon: RefreshCw, label: "Mudah Beradaptasi" },
+    { icon: Clock3, label: "Manajemen Waktu Baik" },
+    { icon: Laugh, label: "Ramah & Humoris" },
 ]
 
 export default function SoftSkill() {
     return (
-        <section className="scroll-mt-24 px-6 py-16" id="soft-skill">
+        <section className="scroll-mt-24 px-6 py-12" id="soft-skill">
             <div
                 className="mx-auto max-w-6xl overflow-hidden rounded-3xl border
-                    border-white/10 bg-gradient-to-r from-blue-500/10
-                    via-white/[0.04] to-orange-400/10 p-7 md:p-10"
+                    border-slate-200 bg-white p-7 shadow-xs md:p-10"
             >
-                <div
-                    className="flex flex-col justify-between gap-7
-                        lg:flex-row lg:items-center"
-                >
-                    <div className="max-w-sm text-white">
-                        <p
-                            className="text-xs font-semibold uppercase
-                                tracking-[0.2em] text-orange-300"
-                        >
-                            Beyond the code
-                        </p>
-                        <h2 className="mt-3 text-2xl font-bold md:text-3xl">
-                            How I show up in a team.
-                        </h2>
-                    </div>
-                    <div className="flex max-w-3xl flex-wrap gap-3">
+                <div className="flex flex-col items-center text-center">
+                    <span
+                        className="inline-flex items-center gap-2 rounded-lg
+                            border border-sky-200 bg-sky-50 px-3.5 py-1.5
+                            text-xs font-semibold uppercase tracking-wider
+                            text-[#0284C7]"
+                    >
+                        <span className="h-1.5 w-1.5 rounded-full bg-[#0284C7]" />
+                        Karakter & Kolaborasi
+                    </span>
+                    <h2 className="mt-3 text-2xl font-extrabold text-slate-900 md:text-3xl">
+                        Cara saya bekerja bersama tim & klien.
+                    </h2>
+
+                    <div className="mt-6 flex max-w-3xl flex-wrap justify-center gap-2.5">
                         {skills.map(({ icon: Icon, label }) => (
                             <span
-                                className="flex items-center gap-2 rounded-full
-                                    border border-white/10 bg-slate-950/40
-                                    px-4 py-2.5 text-xs text-white/65
-                                    transition hover:-translate-y-1
-                                    hover:border-orange-300/30 hover:text-white"
+                                className="inline-flex items-center gap-2
+                                    rounded-xl border border-slate-200
+                                    bg-slate-50 px-4 py-2.5 text-xs
+                                    font-semibold text-slate-700 transition
+                                    hover:-translate-y-0.5 hover:border-sky-300
+                                    hover:bg-sky-50 hover:text-[#0284C7]"
                                 key={label}
                             >
-                                <Icon className="text-orange-300" size={15} />
+                                <Icon className="text-[#0284C7]" size={15} />
                                 {label}
                             </span>
                         ))}

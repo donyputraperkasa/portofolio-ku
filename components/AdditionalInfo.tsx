@@ -7,67 +7,63 @@ const skills = {
 export default function AdditionalInfo() {
     return (
         <section
-        id="additional-info"
-        className="px-6 py-16 md:py-24 text-white flex items-center justify-center scroll-mt-24 animate-[fadeIn_1s_ease-in-out]"
+            className="flex scroll-mt-24 items-center justify-center px-6 py-16 text-slate-900 md:py-24"
+            id="additional-info"
         >
-        <div className="max-w-5xl w-full">
+            <div className="w-full max-w-5xl">
+                <div className="mb-12 text-center">
+                    <h2 className="mb-3 text-3xl font-extrabold md:text-4xl">
+                        Informasi Tambahan
+                    </h2>
+                    <p className="text-slate-600">
+                        Keahlian dan perangkat yang sering saya gunakan
+                    </p>
+                </div>
 
-            <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold mb-4">
-                Additional Information
-            </h2>
-            <p className="text-white/60">
-                Skills and tools that I frequently use
-            </p>
-            </div>
+                <div className="grid gap-6 md:grid-cols-3">
+                    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
+                        <h3 className="mb-4 text-lg font-bold">Frontend</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {skills.frontend.map((item) => (
+                                <span
+                                    className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700"
+                                    key={item}
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
 
-            <div className="grid md:grid-cols-3 gap-6">
+                    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
+                        <h3 className="mb-4 text-lg font-bold">Backend</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {skills.backend.map((item) => (
+                                <span
+                                    className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700"
+                                    key={item}
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
 
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold mb-4">Frontend</h3>
-                <div className="flex flex-wrap gap-2">
-                {skills.frontend.map((item, index) => (
-                    <span
-                    key={index}
-                    className="text-xs bg-white/10 border border-white/20 px-3 py-1 rounded-full"
-                    >
-                    {item}
-                    </span>
-                ))}
+                    <div className="rounded-2xl border border-slate-200 bg-white p-6 shadow-xs">
+                        <h3 className="mb-4 text-lg font-bold">Perangkat</h3>
+                        <div className="flex flex-wrap gap-2">
+                            {skills.tools.map((item) => (
+                                <span
+                                    className="rounded-lg border border-slate-200 bg-slate-50 px-3 py-1 text-xs font-medium text-slate-700"
+                                    key={item}
+                                >
+                                    {item}
+                                </span>
+                            ))}
+                        </div>
+                    </div>
                 </div>
             </div>
-
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold mb-4">Backend</h3>
-                <div className="flex flex-wrap gap-2">
-                {skills.backend.map((item, index) => (
-                    <span
-                    key={index}
-                    className="text-xs bg-white/10 border border-white/20 px-3 py-1 rounded-full"
-                    >
-                    {item}
-                    </span>
-                ))}
-                </div>
-            </div>
-
-            <div className="bg-white/10 backdrop-blur-xl border border-white/20 rounded-2xl p-6">
-                <h3 className="text-lg font-semibold mb-4">Tools</h3>
-                <div className="flex flex-wrap gap-2">
-                {skills.tools.map((item, index) => (
-                    <span
-                    key={index}
-                    className="text-xs bg-white/10 border border-white/20 px-3 py-1 rounded-full"
-                    >
-                    {item}
-                    </span>
-                ))}
-                </div>
-            </div>
-
-            </div>
-
-        </div>
         </section>
     )
 }

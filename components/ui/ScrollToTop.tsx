@@ -7,7 +7,7 @@ export default function ScrollToTop() {
     const [visible, setVisible] = useState(false)
 
     useEffect(() => {
-        const handleScroll = () => setVisible(window.scrollY > 600)
+        const handleScroll = () => setVisible(window.scrollY > 500)
 
         handleScroll()
         window.addEventListener("scroll", handleScroll, { passive: true })
@@ -31,17 +31,17 @@ export default function ScrollToTop() {
     return (
         <button
             aria-label="Back to top"
-            className="fixed bottom-5 right-5 z-40 grid h-12 w-12
-                place-items-center rounded-full border border-orange-200/30
-                bg-orange-300 text-slate-950 shadow-2xl
-                shadow-black/30 transition hover:-translate-y-1 hover:bg-white
-                focus-visible:outline-none focus-visible:ring-2
-                focus-visible:ring-orange-200 md:bottom-7 md:right-7"
+            className="fixed bottom-5 right-5 z-40 inline-flex items-center gap-2
+                rounded-xl border border-[#38BDF8]/40 bg-[#0284C7] px-4 py-[11px]
+                text-[13.5px] font-semibold text-white shadow-lg transition
+                hover:-translate-y-0.5 hover:bg-[#0369A1] focus-visible:outline-none
+                focus-visible:ring-2 focus-visible:ring-[#0284C7] md:bottom-7 md:right-7"
             onClick={scrollToTop}
-            title="Back to top"
+            title="Kembali ke atas"
             type="button"
         >
-            <ArrowUp size={20} strokeWidth={2.5} />
+            <ArrowUp size={16} strokeWidth={2.5} />
+            <span className="hidden sm:inline">Atas</span>
         </button>
     )
 }

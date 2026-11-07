@@ -2,56 +2,52 @@ export type ServiceKind = "mathematics" | "website"
 
 export type Service = {
     audience: string
-    certificateUrl?: string
     credential: string
     credentialDetail: string
     description: string
     features: string[]
+    highlights?: { label: string; value: string }[]
     kind: ServiceKind
     title: string
-    whatsappMessage: string
 }
 
 export const services: Service[] = [
     {
-        audience: "MIDDLE • HIGH SCHOOL",
-        credential: "Bachelor’s Degree in Mathematics Education",
-        credentialDetail: "Certified Professional Teacher (Gr.)",
+        audience: "SMP • SMA / SMK • YOGYAKARTA",
+        credential: "Sarjana Pendidikan Matematika (S.Pd., Gr.)",
+        credentialDetail: "Tersertifikasi Guru Profesional (PPG Prajabatan)",
         description:
-            "Patient and structured one-on-one guidance, tailored to each " +
-            "student’s learning needs and academic goals.",
+            "Pendampingan belajar matematika secara privat atau kelompok kecil yang sabar, terstruktur, dan nyaman — bisa datang ke rumah maupun di kafe pilihan.",
         features: [
-            "Online or in-person sessions in Yogyakarta",
-            "Schoolwork and concept reinforcement",
-            "Exam, TKA, and ASPD preparation",
-            "Personalized learning progress evaluation",
+            "Sesi belajar di rumah atau kafe area Yogyakarta",
+            "Pendalaman materi sekolah & tugas harian",
+            "Persiapan Ujian Sekolah, TKA, dan ASPD",
+            "Evaluasi perkembangan belajar berkala",
+        ],
+        highlights: [
+            { label: "Jenjang", value: "SMP & SMA/K" },
+            { label: "Model Belajar", value: "Ke Rumah / Kafe / Daring" },
         ],
         kind: "mathematics",
-        title: "Mathematics",
-        whatsappMessage:
-            "Hello Dony, I am interested in private mathematics tutoring. " +
-            "Could we discuss the schedule and learning needs?",
+        title: "Les Privat Matematika",
     },
     {
-        audience: "SMALL BUSINESS • SCHOOL • PERSONAL BRAND",
-        certificateUrl:
-            "https://drive.google.com/file/d/" +
-            "1iZQperKuI1gqOSOFeHGNZKmU7NXpDE_m/view?usp=sharing",
-        credential: "RevoU Full-Stack Engineering Graduate",
-        credentialDetail: "Certified in Full-Stack Software Engineering",
+        audience: "SEKOLAH • YAYASAN • UMKM • PERSONAL",
+        credential: "Lulusan RevoU Full-Stack Software Engineering",
+        credentialDetail: "Owner & Pengembang di satelyd.id",
         description:
-            "Modern websites built around your goals, easy to use, " +
-            "responsive on every device, and ready to grow with you.",
+            "Pembuatan website dan aplikasi web modern yang cepat, rapi, responsif di semua perangkat, dan dirancang sesuai kebutuhan operasional Anda.",
         features: [
-            "Landing pages and company profiles",
-            "School and organization websites",
-            "Dashboards and internal systems",
-            "Responsive design, basic SEO, and deployment",
+            "Sistem informasi & tata kelola sekolah/yayasan",
+            "Profil instansi, halaman promosi & katalog produk",
+            "Aplikasi akademik, ujian daring & game edukasi",
+            "Desain ramah pengguna, responsif & siap pakai",
+        ],
+        highlights: [
+            { label: "Layanan", value: "Website Full-Stack & Sistem Kustom" },
+            { label: "Platform Resmi", value: "satelyd.id" },
         ],
         kind: "website",
-        title: "Software Engineering",
-        whatsappMessage:
-            "Hello Dony, I would like to discuss a website project. " +
-            "Could we talk about the requirements and scope?",
+        title: "Jasa Pembuatan Website & Aplikasi",
     },
 ]
