@@ -16,7 +16,7 @@ const experiences = [
             "Bimbingan belajar privat matematika SMP & SMA/K",
         ],
         icon: Building2,
-        role: "Owner & Pengembang Utama",
+        role: "Owner",
         summary:
             "Membangun ekosistem edukasi digital, layanan pembuatan website, dan bimbingan belajar matematika.",
         year: "Sekarang",

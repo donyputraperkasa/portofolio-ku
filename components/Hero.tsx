@@ -2,7 +2,6 @@ import {
     ArrowDown,
     BriefcaseBusiness,
     FileText,
-    Globe,
     MapPin,
 } from "lucide-react"
 import Image from "next/image"
@@ -20,6 +19,37 @@ const cvUrl =
     "https://docs.google.com/document/d/" +
     "1quYpMCwGWWUtjxLIXxJSrMJrJDa0DJvBVqAsg_N3i4g/edit"
 
+const techStack = [
+    { className: "text-slate-900", icon: SiNextdotjs, title: "Next.js" },
+    { className: "text-[#0284C7]", icon: SiReact, title: "React" },
+    { className: "text-amber-500", icon: SiVite, title: "Vite" },
+    { className: "text-blue-600", icon: SiTypescript, title: "TypeScript" },
+    { className: "text-rose-600", icon: SiNestjs, title: "NestJS" },
+    { className: "text-emerald-600", icon: SiNuxt, title: "Nuxt.js" },
+    { className: "text-sky-700", icon: SiPostgresql, title: "PostgreSQL" },
+]
+
+const roleBadges = [
+    {
+        className: "border-sky-200 bg-sky-50 text-[#0284C7]",
+        label: "Owner satelyd.id",
+    },
+    {
+        className: "border-slate-200 bg-slate-50 text-slate-700",
+        label: "Software Engineering",
+    },
+    {
+        className: "border-slate-200 bg-slate-50 text-slate-700",
+        label: "Matematika (Gr.)",
+    },
+]
+
+const stats = [
+    { label: "Proyek Aktif", value: "15+" },
+    { label: "Guru Tersertifikasi", value: "Gr." },
+    { label: "Alumni RevoU", value: "FSSE" },
+]
+
 export default function Hero() {
     return (
         <section
@@ -27,7 +57,7 @@ export default function Hero() {
             id="top"
         >
             <div className="grid items-center gap-12 lg:grid-cols-[1.15fr_0.85fr]">
-                <div>
+                <div className="min-w-0">
                     <h1
                         className="text-4xl font-extrabold leading-[1.12]
                             tracking-tight text-slate-900 sm:text-5xl md:text-6xl"
@@ -42,10 +72,21 @@ export default function Hero() {
                         className="mt-6 max-w-xl text-base leading-8
                             text-slate-600 md:text-lg"
                     >
-                        Saya adalah <strong className="font-semibold text-slate-900">Owner satelyd.id</strong>,{" "}
-                        <strong className="font-semibold text-slate-900">Software Engineering</strong>, dan{" "}
-                        <strong className="font-semibold text-slate-900">Pendidik Matematika</strong> di Yogyakarta.
-                        Membantu sekolah, organisasi, dan bisnis membangun sistem web modern serta mendampingi siswa memahami matematika dengan nyaman.
+                        Saya adalah{" "}
+                        <strong className="font-semibold text-slate-900">
+                            Owner satelyd.id
+                        </strong>
+                        ,{" "}
+                        <strong className="font-semibold text-slate-900">
+                            Software Engineering
+                        </strong>
+                        , dan{" "}
+                        <strong className="font-semibold text-slate-900">
+                            Pendidik Matematika
+                        </strong>{" "}
+                        di Yogyakarta. Membantu sekolah, organisasi, dan bisnis
+                        membangun sistem web modern serta mendampingi siswa
+                        memahami matematika dengan nyaman.
                     </p>
 
                     <div className="mt-8 flex flex-wrap items-center gap-3">
@@ -69,7 +110,10 @@ export default function Hero() {
                                 hover:bg-slate-50 hover:text-slate-900"
                             href="#services"
                         >
-                            <BriefcaseBusiness size={16} className="text-[#0284C7]" />
+                            <BriefcaseBusiness
+                                className="text-[#0284C7]"
+                                size={16}
+                            />
                             Layanan Saya
                         </a>
                         <a
@@ -82,7 +126,7 @@ export default function Hero() {
                             rel="noreferrer"
                             target="_blank"
                         >
-                            <FileText size={16} className="text-[#0284C7]" />
+                            <FileText className="text-[#0284C7]" size={16} />
                             Lihat CV
                         </a>
                     </div>
@@ -93,18 +137,18 @@ export default function Hero() {
                             px-5 py-4 shadow-xs"
                     >
                         <div className="flex items-center gap-2 text-xs font-medium text-slate-600">
-                            <MapPin size={15} className="text-[#0284C7]" />
-                            Yogyakarta, Indonesia
+                            <MapPin className="text-[#0284C7]" size={15} />
+                            Bantul, Indonesia
                         </div>
 
                         <div className="flex items-center gap-3.5 text-xl text-slate-600">
-                            <SiNextdotjs className="text-slate-900" title="Next.js" />
-                            <SiReact className="text-[#0284C7]" title="React" />
-                            <SiVite className="text-amber-500" title="Vite" />
-                            <SiTypescript className="text-blue-600" title="TypeScript" />
-                            <SiNestjs className="text-rose-600" title="NestJS" />
-                            <SiNuxt className="text-emerald-600" title="Nuxt.js" />
-                            <SiPostgresql className="text-sky-700" title="PostgreSQL" />
+                            {techStack.map(({ className, icon: Icon, title }) => (
+                                <Icon
+                                    className={className}
+                                    key={title}
+                                    title={title}
+                                />
+                            ))}
                         </div>
                     </div>
                 </div>
@@ -125,59 +169,33 @@ export default function Hero() {
                             />
                         </div>
 
-                        <div
-                            className="mt-3.5 rounded-2xl border border-slate-200
-                                bg-slate-50 p-4"
-                        >
-                            <div className="flex items-center justify-between gap-2">
-                                <div>
-                                    <p className="text-[11px] font-semibold uppercase tracking-wider text-[#0284C7]">
-                                        Owner
-                                    </p>
-                                    <p className="mt-0.5 text-base font-bold text-slate-900">
-                                        satelyd.id
-                                    </p>
-                                </div>
-                                <a
-                                    className="inline-flex items-center gap-1.5 rounded-lg
-                                        border border-sky-200 bg-sky-50 px-2.5 py-[5px]
-                                        text-[11.5px] font-semibold text-[#0284C7]
-                                        transition hover:bg-[#0284C7] hover:text-white"
-                                    href="https://satelyd.id"
-                                    rel="noreferrer"
-                                    target="_blank"
+                        <div className="mt-3.5 flex flex-wrap items-center justify-center gap-2 py-1 text-xs font-semibold text-slate-600">
+                            {roleBadges.map(({ className, label }) => (
+                                <span
+                                    className={`rounded-lg border px-2.5 py-1 ${className}`}
+                                    key={label}
                                 >
-                                    <Globe size={13} />
-                                    Buka
-                                </a>
-                            </div>
-                            <p className="mt-2 text-xs leading-5 text-slate-600">
-                                Media pembelajaran interaktif (Game Kelas), bimbingan les matematika, dan pembuatan website modern.
-                            </p>
+                                    {label}
+                                </span>
+                            ))}
                         </div>
                     </div>
 
-                    <div
-                        className="mt-4 grid grid-cols-3 gap-3"
-                    >
-                        <div className="rounded-2xl border border-slate-200 bg-white p-3.5 text-center shadow-xs">
-                            <p className="text-xl font-extrabold text-[#0284C7]">15+</p>
-                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
-                                Proyek Aktif
-                            </p>
-                        </div>
-                        <div className="rounded-2xl border border-slate-200 bg-white p-3.5 text-center shadow-xs">
-                            <p className="text-xl font-extrabold text-[#0284C7]">Gr.</p>
-                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
-                                Guru Tersertifikasi
-                            </p>
-                        </div>
-                        <div className="rounded-2xl border border-slate-200 bg-white p-3.5 text-center shadow-xs">
-                            <p className="text-xl font-extrabold text-[#0284C7]">FSSE</p>
-                            <p className="mt-0.5 text-[11px] font-medium text-slate-500">
-                                Alumni RevoU
-                            </p>
-                        </div>
+                    <div className="mt-4 grid grid-cols-3 gap-3">
+                        {stats.map(({ label, value }) => (
+                            <div
+                                className="rounded-2xl border border-slate-200
+                                    bg-white p-3.5 text-center shadow-xs"
+                                key={label}
+                            >
+                                <p className="text-xl font-extrabold text-[#0284C7]">
+                                    {value}
+                                </p>
+                                <p className="mt-0.5 text-[11px] font-medium text-slate-500">
+                                    {label}
+                                </p>
+                            </div>
+                        ))}
                     </div>
                 </div>
             </div>

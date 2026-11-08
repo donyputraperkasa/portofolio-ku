@@ -81,8 +81,8 @@ export default function Projects() {
                 />
 
                 <div
-                    className="mt-10 flex flex-wrap items-center justify-center
-                        gap-2.5"
+                    className="mt-8 flex flex-wrap items-center justify-center
+                        gap-2 sm:mt-10 sm:gap-2.5"
                     role="tablist"
                 >
                     {filterTabs.map((tab) => {
@@ -98,9 +98,10 @@ export default function Projects() {
                         return (
                             <button
                                 aria-selected={isActive}
-                                className={`inline-flex items-center gap-2
-                                    rounded-xl border px-4 py-[11px]
-                                    text-[13.5px] font-semibold transition ${
+                                className={`inline-flex items-center gap-1.5
+                                    rounded-xl border px-3.5 py-2 text-xs
+                                    font-semibold transition sm:gap-2 sm:px-4
+                                    sm:py-[11px] sm:text-[13.5px] ${
                                         isActive
                                             ? "border-[#38BDF8]/40 bg-[#0284C7] text-white shadow-xs"
                                             : "border-slate-200 bg-white text-slate-700 hover:border-sky-300 hover:bg-sky-50 hover:text-[#0284C7]"
@@ -126,7 +127,7 @@ export default function Projects() {
                 </div>
 
                 {/* Grid Kartu Ringkas */}
-                <div className="mt-10 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="mt-8 grid grid-cols-2 gap-3.5 sm:mt-10 sm:grid-cols-3 sm:gap-4 md:grid-cols-4 lg:grid-cols-5">
                     {filteredProjects.map((project) => (
                         <ProjectCard
                             key={project.title}
@@ -155,12 +156,12 @@ export default function Projects() {
                         onClick={(event) => event.stopPropagation()}
                     >
                         {/* Header Modal */}
-                        <div className="flex items-start justify-between gap-4 border-b border-slate-100 px-6 py-5 sm:px-7">
-                            <div className="flex items-center gap-3.5">
+                        <div className="flex items-start justify-between gap-3 border-b border-slate-100 px-5 py-4 sm:gap-4 sm:px-7 sm:py-5">
+                            <div className="flex min-w-0 items-center gap-3 sm:gap-3.5">
                                 <div
-                                    className={`grid h-12 w-12 shrink-0
-                                        place-items-center rounded-2xl text-base
-                                        font-extrabold ${
+                                    className={`grid h-11 w-11 shrink-0
+                                        place-items-center rounded-2xl text-sm
+                                        font-extrabold sm:h-12 sm:w-12 sm:text-base ${
                                             accentStyles[selectedProject.accent]
                                                 .iconBox
                                         }`}
@@ -172,7 +173,7 @@ export default function Projects() {
                                         .slice(0, 2)
                                         .toUpperCase()}
                                 </div>
-                                <div>
+                                <div className="min-w-0">
                                     <div className="flex flex-wrap items-center gap-1.5">
                                         <span
                                             className={`rounded-md border px-2
@@ -196,7 +197,7 @@ export default function Projects() {
                                             </span>
                                         )}
                                     </div>
-                                    <h3 className="mt-1 text-xl font-extrabold text-slate-900">
+                                    <h3 className="mt-1 text-base font-extrabold text-slate-900 sm:text-xl">
                                         {selectedProject.title}
                                     </h3>
                                 </div>
